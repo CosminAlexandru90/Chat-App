@@ -1,0 +1,41 @@
+<div class="h-full flex flex-col">
+  <div id="chats-header" class="flex flex-row items-center">
+    <div class="font-medium text-foreground">Chats</div>
+    <form action="" class="flex flex-row grow">
+      <input type="text" id="chatName" name="chatName" class="grow mx-4 bg-incolor backdrop-blur-md rounded-lg text-foreground">
+      <label for="chatName">
+        <mat-icon class="text-neutral pt-1">search</mat-icon>
+      </label>
+    </form>
+    <button mat-button class="text-2xl font-normal text-primary">+</button>
+  </div>
+  <div id="chats-filters" class="flex flex-row mt-6 mb-6 space-x-2">
+    <button class="px-4 py-2 rounded-xl font-medium text-accent bg-accent">Open</button>
+    <button class="px-4 py-2 rounded-xl font-medium text-accent bg-accent">Done</button>
+    <button class=" px-4 py-2 rounded-xl border-2 border-dotted border-neutral font-medium text-neutral">Unread</button>
+  </div>
+  <div id="chats-list" class="grow flex-flex-col overflow-y-auto">
+    <div class="chat-card flex flex-row p-4 rounded-lg mt-2 items-center hover:bg-card-neutral backdrop-blur-lg" *ngFor="let chat of chats" (click)="selected.emit(chat.id)">
+      <img
+        src="../../../../../assets/images/{{chat.members[chat.members.length-1]===currentUser?chat.members[chat.members.length-2]:chat.members[chat.members.length-1]}}.jpg"
+        alt="{{chat.members[chat.members.length-1]===currentUser?chat.members[chat.members.length-2]:chat.members[chat.members.length-1]}}"
+        height="50"
+        width="50"
+        class="rounded-xl">
+      <div class="chat-identifier flex flex-col mx-4 grow space-y-2">
+        <div class="font-medium text-card-primary">{{chat.members}}</div>
+        <div
+          class="font-medium text-card-secondary">{{currentUser === chat.messages[chat.messages.length - 1].author ? "You" : chat.messages[chat.messages.length - 1].author}}
+          : {{chat.messages[chat.messages.length - 1].content}}</div>
+      </div>
+      <div class="self-end py-1 text-neutral">12m</div>
+    </div>
+  </div>
+  <div id="chats-feedback">
+    <div class="flex flex-row justify-items customize-chat bg-card-neutral backdrop-blur-md px-4 py-2 rounded-2xl">
+      <mat-icon class="text-neutral mx-2 mt-1">feedback</mat-icon>
+      <div class="py-1 mx-2 font-medium text-neutral">Submit Feedback</div>
+    </div>
+  </div>
+</div>
+

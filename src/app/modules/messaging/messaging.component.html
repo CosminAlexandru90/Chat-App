@@ -1,0 +1,21 @@
+<div class="h-screen w-full flex flex-col dark:bg-base backdrop-blur-md">
+  <div class="h-32 w-full border-l-2 border-slate-500 border-opacity-20">
+    <app-header></app-header>
+  </div>
+  <div class="flex h-full w-full">
+    <div [ngStyle]="{'width': '44%'}" class="h-full p-8 border-2 border-slate-500 border-opacity-20">
+      <app-chats
+        [currentUser]="currentUser"
+        [chats]="chats"
+      (selected)="selectChat($event)"></app-chats>
+    </div>
+    <div [ngStyle]="{'width': '56%'}" class="h-full border-t-2 border-b-2 border-slate-500 border-opacity-20">
+      <app-chat
+        [currentUser]="currentUser"
+        [messages]="messages" (message)="submitMessage($event)"></app-chat>
+    </div>
+    <div [ngStyle]="{'width': '44%'}" class="h-full border-2 border-slate-500 border-opacity-20">
+      <app-chat-dashboard [members]="members" [admins]="admins"></app-chat-dashboard>
+    </div>
+  </div>
+</div>

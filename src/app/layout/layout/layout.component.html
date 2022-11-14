@@ -1,0 +1,47 @@
+<div class="h-screen grid place-content-center static border-b-2 dark:bg-base backdrop-blur-md">
+  <button class="absolute w-full justify-self-center">
+    <mat-icon class="mt-8 text-neutral">menu</mat-icon>
+  </button>
+  <ul>
+    <li class="flex">
+      <a mat-button routerLink="/home"><div class="rounded-2xl text-neutral p-5 h-16">
+        <mat-icon class="m-0 p-0"> dashboard</mat-icon>
+      </div></a>
+      <div class="hidden"><a mat-button routerLink="/analytics" class="text-neutral">Messaging</a></div>
+    </li>
+    <li class="flex">
+      <a mat-button routerLink="/analytics"><div class="rounded-2xl text-neutral p-5 h-16">
+        <mat-icon class="m-0 p-0 "> show_chart</mat-icon>
+      </div></a>
+      <div class="hidden"><a mat-button routerLink="/analytics" class="text-foreground">Messaging</a></div>
+    </li>
+    <li class="flex">
+      <a mat-button routerLink="/browse"><div class="rounded-2xl text-neutral p-5 h-16">
+        <mat-icon class="m-0 p-0"> image_search</mat-icon>
+      </div></a>
+      <div class="hidden"><a mat-button routerLink="/analytics" class="text-foreground">Messaging</a></div>
+    </li>
+    <li class="flex">
+      <a mat-button routerLink="/profiles"><div class="rounded-2xl text-neutral p-5 h-16">
+        <mat-icon class="m-0 p-0"> folder</mat-icon>
+      </div></a>
+      <div class="hidden"><a mat-button routerLink="/analytics" class="text-foreground">Messaging</a></div>
+    </li>
+    <li class="flex">
+      <a mat-button routerLink="/messaging"><div class="rounded-2xl text-neutral p-5 h-16">
+        <mat-icon class="m-0 p-0"> chat</mat-icon>
+      </div></a>
+      <div class="hidden"><a mat-button routerLink="/analytics" class="text-foreground">Messaging</a></div>
+    </li>
+    <li class="flex">
+      <a mat-button routerLink="/archives"><div class="rounded-2xl text-neutral p-5 h-16">
+        <mat-icon class="m-0 p-0"> library_books</mat-icon>
+      </div></a>
+      <div class="hidden"><a mat-button routerLink="/analytics" class="text-foreground">Messaging</a></div>
+    </li>
+  </ul>
+  <button (click)="toggleMode()" class="text-foreground"> Dark/Light</button>
+</div>
+
+
+

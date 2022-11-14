@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-tab-body-wrapper {
+  @apply h-full;
+}
+
+.mat-tab-label{
+  @apply dark:text-neutral;
+}
+
+.mat-tab-label-active{
+  @apply text-primary dark:text-primary font-bold;
+}
+
+@layer base {
+  :root {
+    --color-text-foreground:#2e3137;
+    --color-text-neutral:rgba(46, 49, 55, 0.5);
+    --color-text-primary:#6645de;
+    --color-text-accent:#429df1;
+    --color-text-inverted:#fefefe;
+    --color-text-card-primary:rgba(46, 49, 55, 0.9);
+    --color-text-card-secondary:rgba(46, 49, 55, 0.7);
+    --color-base:#fefefe;
+    --color-primary:#6645de;
+    --color-accent:rgba(66,157,241,0.1);
+    --color-card-neutral:rgba(46, 49, 55, 0.05);
+    --color-card-primary:rgba(102, 69, 222, 0.1);
+    --color-hue:66,157,241;
+    --color-incolor:rgba(102, 69, 222, 0);
+  }
+
+  .dark {
+    --color-text-foreground: #fefefe;
+    --color-text-neutral:rgba(254, 254, 254, 0.5);
+    --color-text-primary:#6645de;
+    --color-text-accent:#429df1;
+    --color-text-inverted:#fefefe;
+    --color-text-card-primary:rgba(254, 254, 254, 0.7);
+    --color-text-card-secondary:rgba(254, 254, 254, 0.3);
+    --color-base:#131521;
+    --color-primary:#6645de;
+    --color-accent:rgba(66,157,241,0.1);
+    --color-neutral:rgba(254, 254, 254, 0.5);
+    --color-card-neutral:rgba(46, 49, 55, 0.1);
+    --color-card-primary:rgba(102, 69, 222, 0.1);
+    --color-hue:66,157,241;
+  }
+}

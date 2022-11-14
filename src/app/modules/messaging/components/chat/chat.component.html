@@ -1,0 +1,54 @@
+<div class="h-full flex flex-col" *ngIf="messages">
+  <div id="chat-title" class="h-24 px-8 pt-8 pb-8">
+    <div class="text-3xl font-medium text-foreground">Scouting Group</div>
+  </div>
+  <div id="messages" class="w-full grow py-8 overflow-y-auto">
+    <div id="chat-welcome-message" class="bg-gradient-to-r from-hue/5 via-hue/5 to-transparent py-8">
+      <div class="font-medium text-accent px-8 pb-2">Welcome to the Streamline scouting chat</div>
+      <div class="text-accent text-opacity-75 px-8">We can now freely collaborate regarding our current Demand.<br>
+        Any questions about the documentation or the project, please feel free to get in contact with us.
+      </div>
+    </div>
+    <div class="p-8">
+      <div class="session-date grid">
+        <p class="justify-self-center dark:text-foreground" *ngIf="messages">{{messages[0].date}}</p>
+      </div>
+      <div *ngFor="let message of messages">
+        <div *ngIf="message.author!==currentUser">
+          <div class="message flex flex-row items-center mb-1">
+            <img src="../../../../../assets/images/{{message.author}}.jpg" alt="{{message.author}}" height="30"
+                 width="30"
+                 class="self-center rounded-full">
+            <div
+              class="backdrop-blur-md mx-4 px-6 py-3 rounded-3xl my-0 text-card-primary bg-card-neutral">{{message.content}}</div>
+          </div>
+        </div>
+        <div *ngIf="message.author===currentUser">
+          <div class="message flex flex-row-reverse items-center mb-1">
+            <img src="../../../../../assets/images/{{message.author}}.jpg" alt="{{message.author}}" height="30"
+                 width="30" class="rounded-full">
+            <div class="mx-4 px-6 py-3 rounded-3xl bg-primary text-inverted">{{message.content}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="new-message" class="flex flex-row w-full px-8 pb-8">
+    <button class="text-foreground">
+      <mat-icon> attach_file</mat-icon>
+    </button>
+    <form class="flex flex-row grow" [formGroup]="inputMessageForm" (ngSubmit)="onSubmit()">
+      <input type="text"
+             formControlName="inputMessage"
+             class="grow px-4 py-2 rounded-lg border-2 border-neutral bg-incolor backdrop-blur-md mx-4"
+             placeholder="Write a message...">
+      <button type="submit" class="text-primary">
+        <mat-icon class="">send</mat-icon>
+      </button>
+    </form>
+  </div>
+</div>
+<div *ngIf="!messages">
+  <h1>Welcome to Messaging!</h1>
+  <h3>Please select or start a conversation</h3>
+</div>

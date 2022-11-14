@@ -1,0 +1,58 @@
+<mat-tab-group mat-stretch-tabs [color]="'primary'" class="h-full py-8 grid place-content-stretch"  *ngIf="members">
+  <mat-tab label="Chat Members" class="h-full">
+    <div class="h-full px-8 pt-8 flex flex-col">
+      <div class="membri grow">
+        <div class="members py-2">
+          <div class="text-neutral font-normal">MEMBERS</div>
+          <div
+            class="member-card flex flex-row w-full justify-between backdrop-blur-md relative my-6 hover:bg-card-neutral px-4 py-2 rounded-lg"
+          *ngFor="let member of members">
+            <div class="flex flex-row items-center">
+              <img src="../../../../../assets/images/{{member}}.jpg" alt="Ion" height="50" width="50" class="rounded-xl">
+              <div class="flex flex-col mx-4 content-center">
+                <div class="font-medium text-card-primary">{{member}}</div>
+                <div class="text-card-secondary">Taran</div>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-card-primary text-primary p-5 scale-75">
+              <mat-icon> chat_bubble</mat-icon>
+            </div>
+          </div>
+          <hr class="border-slate-500 border-opacity-20">
+        </div>
+        <div class="admins my-8">
+          <div class="flex relative">
+            <div class="text-neutral font-normal">ADMINS</div>
+            <mat-icon class="absolute right-0 text-neutral">edit</mat-icon>
+          </div>
+          <div
+            class="member-card flex flex-row w-full justify-between relative px-4 py-2 my-4 rounded-xl hover:bg-card-neutral"
+          *ngFor="let admin of admins">
+            <div class="flex flex-row items-center">
+              <img src="../../../../../assets/images/{{admin}}.jpg" alt="Ion" height="50" width="50" class="rounded-xl">
+              <div class="flex flex-col mx-4 content-center">
+                <div class="text-card-primary">{{admin}}</div>
+                <div class="text-card-secondary">Taran</div>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-primary-700 bg-card-primary text-primary p-5 scale-75">
+              <mat-icon> chat_bubble</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="setari">
+        <div class="customize-chat bg-card-neutral backdrop-blur-md p-4 rounded-xl">
+          <div class="text-card-primary font-medium py-1">Customize Chat</div>
+          <div class="py-1 text-card-secondary">Change layout and colors</div>
+        </div>
+        <div class="get-support mt-3 bg-card-primary backdrop-blur-md px-4 py-4 rounded-xl">
+          <div class="text-primary font-medium py-1">Privacy and Support</div>
+          <div class="py-1 text-card-primary">Get immediate support</div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Shared Files"> Content 2</mat-tab>
+</mat-tab-group>
+

@@ -1,0 +1,186 @@
+{
+  "chats": [
+    {
+      "id": 1,
+      "messages": [
+        {
+          "id": 1,
+          "author": "Ion",
+          "content": "Hai salut bajetii",
+          "date": "August 19, 1975 23:15:30"
+        },
+        {
+          "id": 2,
+          "author": "Costel",
+          "content": "Hai noroc",
+          "date": "August 19, 1975 23:15:30"
+        },
+        {
+          "id": 3,
+          "author": "Gica",
+          "content": "Ciao",
+          "date": "August 19, 1975 23:15:30"
+        },
+        {
+          "id": 4,
+          "author": "Ion",
+          "content": "Va fac la table diseara?",
+          "date": "August 19, 1975 23:15:30"
+        },
+        {
+          "id": 5,
+          "author": "Ion",
+          "content": "salut",
+          "date": "1661421408529"
+        },
+        {
+          "id": 6,
+          "author": "Ion",
+          "content": "Noroc baieti",
+          "date": "1661421408529"
+        },
+        {
+          "id": 7,
+          "author": "Ion",
+          "content": "gdfdfdg",
+          "date": "1661421408529"
+        }
+      ],
+      "members": [
+        "Ion",
+        "Costel",
+        "Gica"
+      ],
+      "admins": [
+        "Ion"
+      ]
+    },
+    {
+      "0": {
+        "id": 1,
+        "author": "Ion",
+        "content": "Hai salut Gica",
+        "date": "August 20, 1975 23:15:30"
+      },
+      "1": {
+        "id": 2,
+        "author": "Costel",
+        "content": "Ciao",
+        "date": "August 20, 1975 23:15:30"
+      },
+      "2": {
+        "id": 3,
+        "author": "Ion",
+        "content": "Te bagi la table?",
+        "date": "August 20, 1975 23:15:30"
+      },
+      "3": {
+        "id": 4,
+        "author": "Ion",
+        "content": "kjbfkjfkjfd",
+        "date": "1661421408529"
+      },
+      "id": 2,
+      "messages": [
+        {
+          "id": 1,
+          "author": "Ion",
+          "content": "Hai salut Gica",
+          "date": "August 20, 1975 23:15:30"
+        },
+        {
+          "id": 2,
+          "author": "Costel",
+          "content": "Ciao",
+          "date": "August 20, 1975 23:15:30"
+        },
+        {
+          "id": 3,
+          "author": "Ion",
+          "content": "Te bagi la table?",
+          "date": "August 20, 1975 23:15:30"
+        },
+        {
+          "id": 4,
+          "author": "Ion",
+          "content": "yfhgfghg",
+          "date": "1661421408529"
+        },
+        {
+          "id": 5,
+          "author": "Ion",
+          "content": "fgfbvn",
+          "date": "1661421408529"
+        },
+        {
+          "id": 6,
+          "author": "Ion",
+          "content": "cgn",
+          "date": "1661421408529"
+        }
+      ],
+      "members": [
+        "Ion",
+        "Costel"
+      ],
+      "admins": [
+        "Ion"
+      ]
+    },
+    {
+      "id": 3,
+      "messages": [
+        {
+          "id": 1,
+          "author": "Gica",
+          "content": "Hai salut Costel",
+          "date": "August 21, 1975 23:15:30"
+        },
+        {
+          "id": 2,
+          "author": "Costel",
+          "content": "Hai noroc",
+          "date": "August 21, 1975 23:15:30"
+        },
+        {
+          "id": 3,
+          "author": "Gica",
+          "content": "Mergem la Ion diseara?",
+          "date": "August 21, 1975 23:15:30"
+        },
+        {
+          "id": 4,
+          "author": "Costel",
+          "content": "Bah nu stiu...",
+          "date": "August 21, 1975 23:15:30"
+        },
+        {
+          "id": 5,
+          "author": "Ion",
+          "content": "vxvcbd",
+          "date": "1661421408529"
+        },
+        {
+          "id": 6,
+          "author": "Ion",
+          "content": "hfdiuhefiuhe",
+          "date": "1661421408529"
+        }
+      ],
+      "members": [
+        "Gica",
+        "Costel"
+      ],
+      "admins": [
+        "Costel"
+      ]
+    }
+  ],
+  "users": [
+    "Costel",
+    "Ion",
+    "Gica",
+    "Sandu",
+    "Jan"
+  ]
+}
